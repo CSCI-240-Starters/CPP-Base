@@ -1,0 +1,4 @@
+{
+    "testMate.cpp.test.advancedExecutables": [
+        "test_*"]
+}
