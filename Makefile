@@ -2,7 +2,7 @@ CC=g++
 CFLAGS=-c -Wall -ggdb -I.
 LDFLAGS=
 SOURCES=MyComplex.cpp MyComplex-sandbox.cpp
-EXECUTABLE=MyComplexsandbox
+EXECUTABLE=MyComplex-sandbox
 TESTS=MyComplex.cpp MyComplex_test.cpp
 
 
@@ -29,12 +29,13 @@ include .depend
 
 $(EXECUTABLE): $(OBJECTS) 
 	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+	cp $(EXECUTABLE) a.out
 
 .cpp.o:
 	$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	rm -rf *o $(EXECUTABLE) test_executable 
+	rm -rf *o $(EXECUTABLE) test_executable a.out
 	rm -rf coverage
 	rm -f ./.depend
 	rm $(GTESTDIR)/libgtest.a
