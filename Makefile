@@ -44,7 +44,7 @@ clean:
 
 # Google test section
 $(GTESTDIR)/libgtest.a: 
-	$(CC) -isystem $(GTESTDIR) -I $(GTESTDIR) -pthread -c $(GTESTDIR)/src/gtest-all.cc -o $(GTESTDIR)/gtest-all.o
+	$(CC) -isystem $(GTESTDIR) -I $(GTESTDIR) -pthread -c $(GTESTDIR)/src/gtest-all.cc -o $(GTESTDIR)/gtest-all.o -std=c++17
 	ar -rv $(GTESTDIR)/libgtest.a $(GTESTDIR)/gtest-all.o
 
 # This will also recompile if any source file is changed.
