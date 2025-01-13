@@ -7,7 +7,7 @@ TESTS=MyComplex.cpp MyComplex_test.cpp
 
 
 #TODO: Need a more elegant way of specifying objects and tests
-GTESTDIR=/workspaces/$(RepositoryName)/googletest
+GTESTDIR=$$(pwd)/googletest
 OBJECTS=$(SOURCES:.cpp=.o)
 
 FLAGS   = -Iinclude
